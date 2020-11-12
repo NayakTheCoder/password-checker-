@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Input !</title>
+    <style></style>
+</head>
+<body>
+    <h1 style="text-align:center;font-family:cursive;">Enter username and password</h1>
+    <button type="button" onclick="myfunction()">Info</button>
+    <br>
+    <div style="text-align: center;font-family: cursive;font-size: 30px;border: 2px solid black;width: 50%;">
+     <label for="password">Enter Username</label>
+     <br>
+     <input type="text" placeholder="Enter Username" id="username">
+     <br>
+     <br>
+     <label for="action">Enter password</label>
+     <br>
+     <input type="password" placeholder="Enter Password(max len - 12" maxlength="12" id="password">
+     <br>
+     <button type="submit" onclick="myfunction1()">enter</button>
+    </div>
+    <br>
+    <br>
+    <p id="display"></p>
+</body>
+<script>
+  // declaring variables
+    let username = document.getElementById("username");
+    let password = document.getElementById("password");
+    let para = document.getElementById("display");
+   
+    //creating a function which will be executed on the click of button
+    function myfunction(){
+        alert("Enter the form to log in with your Username and password");
+    }
+    function myfunction1(e){
+    
+    // checks wheter the info given by the user is true or not
+       if(username.value === "SathwikSnayak06@gmail.com"&& password.value === "12345678"){
+       // if the password and username set by the user given by the user ae true  , then the innerHTML of <p> will be true
+        para.innerHTML = "succesfully logged in !";
+       }
+       else{
+        para.innerHTML = "Invalid ! log in failed !";
+       }
+       username.value = " ";
+       password.value = " ";
+
+       
+    }
+
+</script>
+</html>
